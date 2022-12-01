@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Catcher in the Rye",
+    "author": "J. D. Salinger",
+    "image_url": ""
+
+  },
+  {
+    "name": "Cat's Cradle",
+    "author": "Kurt Vonnegut",
+    "image_url": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fprodimage.images-bn.com%2Fpimages%2F9780385333481_p0_v1_s1200x630.jpg&f=1&nofb=1&ipt=c426be2051973d1767ab7e265ad905ab5da948ad31edf6bc85fa7e8aff06b9c9&ipo=images"
+  },
+  {
+    "name": "Oryx and Crake",
+    "author": "Margaret Atwood",
+    "image_url": "https://hexdimension.com/wp-content/uploads/2014/03/oryx-and-crake.gif"
+  },
+  {
+    "name": "Slaughterhouse-Five",
+    "author": "Kurt Vonnegut",
+    "image_url": "https://www.readersdigest.co.uk/media/Slaughterhouse-Five-2.jpg"
+  },
+  {
+    "name": "1984",
+    "author": "George Orwell",
+    "image_url": "https://www.studypool.com/images/studyGuides/1984/Book_Cover.jpg"
+  }
+]
