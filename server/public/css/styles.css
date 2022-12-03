@@ -1,0 +1,28 @@
+nav {
+  height: 100px;
+  background-color: cornflowerblue;
+}
+
+header {
+  height: 100px;
+}
+
+h1 {
+  font-size: 30px;
+  color: red;
+}
+
+img {
+  max-width: 100%;
+  max-height: 350px;
+}
+
+.bookshelf {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.book-img-container {
+  width: 250px;
+  height: 350px;
+}

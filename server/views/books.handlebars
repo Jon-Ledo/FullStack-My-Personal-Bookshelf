@@ -1,0 +1,25 @@
+{{!-- PLACEHOLDER FILE UNTIL FINAL DESIGN CHOSEN --}}
+
+{{#each books}}
+  <div class="book">
+    <div class="book-img-container">
+      {{#if image_url}}
+      <img src="{{image_url}}" alt="{{name}} by {{author}}">
+      {{else}}
+      <img src="/images/unavailable-cover.jpg" alt="{{name}} by {{author}}">
+      {{/if}}
+    </div>
+
+    <div class="book-content">
+      <h3 class="book-title">{{name}}</h3>
+      <h5 class="book-author">{{author}}</h5>
+      <p>Book ID: {{id}}</p>
+      <p>User user_name: {{user.user_name}}</p>
+      <p>User email: {{user.email}}</p>
+      <p>User password: {{user.password}}</p>
+    </div>
+  </div>
+{{/each}}
+
+
+{{!-- PLACEHOLDER FILE UNTIL FINAL DESIGN CHOSEN --}}
