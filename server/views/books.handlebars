@@ -1,5 +1,8 @@
 {{!-- PLACEHOLDER FILE UNTIL FINAL DESIGN CHOSEN --}}
 
+{{!-- ADD form here for new books --}}
+
+{{#with userBookshelf}}
 {{#each books}}
   <div class="book">
     <div class="book-img-container">
@@ -14,12 +17,14 @@
       <h3 class="book-title">{{name}}</h3>
       <h5 class="book-author">{{author}}</h5>
       <p>Book ID: {{id}}</p>
-      <p>User user_name: {{user.user_name}}</p>
-      <p>User email: {{user.email}}</p>
-      <p>User password: {{user.password}}</p>
+
+      <p>User user_name: {{user_name}}</p>
+      <p>User email: {{email}}</p>
+      <p>User password: {{password}}</p>
     </div>
   </div>
 {{/each}}
+{{/with}}
 
 
 {{!-- PLACEHOLDER FILE UNTIL FINAL DESIGN CHOSEN --}}
