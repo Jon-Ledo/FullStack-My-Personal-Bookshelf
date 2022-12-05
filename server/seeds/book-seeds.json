@@ -24,5 +24,50 @@
     "name": "1984",
     "author": "George Orwell",
     "image_url": "https://www.studypool.com/images/studyGuides/1984/Book_Cover.jpg"
+  },
+  {
+    "name": "American Gods",
+    "author": "Neil Gaiman",
+    "image_url": "https://supposedlyfunblog.files.wordpress.com/2015/08/american-gods-neil-gaiman.jpg?w=609"
+  },
+  {
+    "name": "The Dharma Bums",
+    "author": "Jack Kerouac",
+    "image_url": "https://2.bp.blogspot.com/_miShaSxv6bo/TD5u7rXjV7I/AAAAAAAAAEI/DRixRma1cYw/s1600/dharma_bums.jpg"
+  },
+  {
+    "name": "The Crucible",
+    "author": "Arthur Miller",
+    "image_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.penguin.com.au%2Fcovers%2Foriginal%2F9780141182551.jpg&f=1&nofb=1&ipt=5903e496688de4a1326d8db5bb79071fdbc5848879ab0e28eeacdd4f4415c8b8&ipo=images"
+  },
+  {
+    "name": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "image_url": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fd.ibtimes.co.uk%2Fen%2Ffull%2F230390%2Fpride-prejudice-by-jane-austen.jpg&f=1&nofb=1&ipt=c53a66551bc52ce68f46a3a62ecf5fb6beca108d9a15443dbe5c832dcc438c04&ipo=images"
+  },
+  {
+    "name": "Hamlet",
+    "author": "William Shakespeare",
+    "image_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.ustarnovels.com%2Fmedia%2F1000x1000%2Fcover_hamlet.jpg&f=1&nofb=1&ipt=5b7fb175739130e468231f2a02d26c11d8cb39000e38664834613f71cf7862de&ipo=images"
+  },
+  {
+    "name": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "image_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.thenile.io%2Fr1000%2F9780486415871.jpg%3Fr%3D5e4284a48e904&f=1&nofb=1&ipt=7ab198cabf2e6b4ad0d3571a22cd37ee13af60123f64407160f9eeecabde46a3&ipo=images"
+  },
+  {
+    "name": "The Invisible Man",
+    "author": "H. G. Wells",
+    "image_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.penguin.com.au%2Fcovers%2Foriginal%2F9780451531674.jpg&f=1&nofb=1&ipt=bec153571c4a9e6e9f1fcf67401c3fa9da4eb51a15a28ddecfbff19ba61d51fe&ipo=images"
+  },
+  {
+    "name": "The Illustrated Man",
+    "author": "Ray Bradbury",
+    "image_url": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.GGhpBl8nn2qOKT1TNSJMRAHaJ4%26pid%3DApi&f=1&ipt=f36689d999445356e5fbf9b3634aa97eff1f4ee8137cfeaa4b278231dd447c5d&ipo=images"
+  },
+  {
+    "name": "Brave New World",
+    "author": "Aldous Huxley",
+    "image_url": "https://1.bp.blogspot.com/-VKwWtOtDJ08/UGhCP917HrI/AAAAAAAAATM/7Hpd2RlO5-M/s1600/Brave+new+world.jpg"
   }
 ]
