@@ -40,8 +40,9 @@ router.get('/bookshelf/:id', async (req, res) => {
 })
 
 // error page, catch all bad requests here
-router.get('*', (req, res) => {
-  res.render('error')
-})
+// NOTE currently blocking API request too. Disabled for now
+// router.get('*', (req, res) => {
+//   res.render('error')
+// })
 
 module.exports = router
