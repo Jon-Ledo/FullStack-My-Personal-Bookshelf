@@ -61,7 +61,7 @@ router.post('/', async (req, res) => {
   try {
     const newBook = await Book.create(req.body)
 
-    res.status(201).json({ message: 'new user created', newUser })
+    res.status(201).json({ message: 'new book created', newBook })
   } catch (error) {
     res.status(500).json(error)
   }

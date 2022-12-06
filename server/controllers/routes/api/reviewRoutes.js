@@ -47,11 +47,12 @@ router.post('/', async (req, res) => {
   // {
   //   "text": "",
   //   "user_id":
+  //   "book_id":
   // }
   try {
     const newReview = await Review.create(req.body)
 
-    res.status(200).json(newReview)
+    res.status(201).json(newReview)
   } catch (error) {
     res.status(500).json(error)
   }
