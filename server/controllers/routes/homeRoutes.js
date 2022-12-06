@@ -6,9 +6,19 @@ router.get('/', async (req, res) => {
   res.render('home')
 })
 
+// signup page
+router.get('/sign_up', async (req, res) => {
+  res.render('signup')
+})
+
 // login page
 router.get('/login', async (req, res) => {
   res.render('login')
+})
+
+// about page
+router.get('/about', async (req, res) => {
+  res.render('about')
 })
 
 // after authentication
@@ -23,13 +33,15 @@ router.get('/bookshelf/:id', async (req, res) => {
 
     const userBookshelf = dbUserData.get({ plain: true })
 
-    console.log(userBookshelf)
-
     res.render('books', { userBookshelf })
   } catch (error) {
-    // error page
     res.render('error')
   }
+})
+
+// error page, catch all bad requests here
+router.get('*', (req, res) => {
+  res.render('error')
 })
 
 module.exports = router
