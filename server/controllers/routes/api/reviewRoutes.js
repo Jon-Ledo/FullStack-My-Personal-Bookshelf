@@ -7,10 +7,10 @@ const { Review, User, Book } = require('../../../models')
 router.get('/', async (req, res) => {
   try {
     const dbReviewData = await Review.findAll({
-      include: {
-        model: User,
-        attributes: ['id', 'user_name'],
-      },
+      include: [
+        { model: User, attributes: ['id', 'user_name'] },
+        { model: Book },
+      ],
     })
 
     const reviews = dbReviewData.map((review) => {
@@ -27,10 +27,10 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const dbReviewData = await Review.findByPk(req.params.id, {
-      include: {
-        model: User,
-        attributes: ['id', 'user_name'],
-      },
+      include: [
+        { model: User, attributes: ['id', 'user_name'] },
+        { model: Book },
+      ],
     })
 
     const review = dbReviewData.get({ plain: true })

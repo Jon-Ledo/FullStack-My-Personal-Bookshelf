@@ -1,23 +1,33 @@
 [
   {
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sunt eveniet fugiat libero possimus natus soluta amet sed, dolorum nihil dignissimos? Quisquam ut quos fuga consequatur corrupti voluptate temporibus odio consequuntur sed libero dolorum et voluptatibus, exercitationem sunt perferendis adipisci, omnis totam delectus beatae ea autem! Rem sapiente nemo accusantium deserunt, alias, minus itaque soluta assumenda animi dignissimos natus totam non hic est reiciendis dicta tempore. Repellendus accusamus ex corrupti dolor placeat quisquam magnam rem, ipsa vitae quae odit impedit suscipit consequuntur minus eaque earum ipsum laborum non vero mollitia. Unde vel blanditiis magni nemo qui totam quis, natus est.",
-    "user_id": 1
+    "user_id": 1,
+    "book_id": 1
   },
   {
     "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut sunt eveniet fugiat libero possimus natus soluta amet sed, dolorum nihil dignissimos? Quisquam ut quos fuga consequatur corrupti voluptate temporibus odio consequuntur sed libero dolorum et voluptatibus, exercitationem sunt perferendidsfgdsg sdf gdsfg sdf gsdf gsddfsgsgawteAW A FAQW TWQA FGAWDESF AWq3r fsdazfsafs adipisci, omnis totam delectus beatae ea autem! Rem sapiente nemo accusantium deserunt, alias, minus itaque soluta assumenda animi dignissimos natus totam non hic est reiciendis dicta tempore. Repellendus accusamus ex corrupti dolor placeat quisquam magnam rem, ipsa vitae quae odit impedit suscipit consequuntur minus eaque earum ipsum laborum non vero mollitia. Unde vel blanditiis magni nemo qui totam quis, natus est.",
-    "user_id": 1
+    "user_id": 1,
+    "book_id": 2
   },
   {
     "text": "Lorem ipsum dolor THID ITERSATION SFGUSDU  UA GAP QWEHF QG sit amet consectetur adipisicing elit. Aut sunt eveniet fugiat libero possimus natus soluta amet sed, dolorum nihil dignissimos? Quisquam ut quos fuga consequatur corrupti voluptate temporibus odio consequuntur sed libero dolorum et voluptatibus, exercitationem sunt perferendis adipisci, omnis totam delectus beatae ea autem! Rem sapiente nemo accusantium deserunt, alias, minus itaque soluta assumenda animi dignissimos natus totam non hic est reiciendis dicta tempore. Repellendus accusamus ex corrupti dolor placeat quisquam magnam rem, ipsa vitae quae odit impedit suscipit consequuntur minus eaque earum ipsum laborum non vero mollitia. Unde vel blanditiis magni nemo qui totam quis, natus est.",
-    "user_id": 2
+    "user_id": 2,
+    "book_id": 6
   },
   {
     "text": "Lorem ipsum dolor THID ITERSATION SFGUSDU  UA GAP QWEHF QG sit amet consectetur adipisicing elit. Aut sunt eveniet fugiat libero possimus natus soluta amet sed, dolorum nihil dignissimos? Quisquam ut quos fuga consequatur corrupti voluptate temporibus odio consequuntur sed libero dolorum et voluptatibus, exercitationem sunt perferendis adipisci, omnis totam delectus beatae ea autem! Rem sapiente nemo accusantium deserunt, alias, minus itaque soluta assumenda animi dignissimos natus totam non hic est reiciendis dicta tempore. Repellendus accusamus ex corrupti dolor placeat quisquam magnam rem, ipsa vitae quae odit impedit suscipit consequuntur minus eaque earum ipsum laborum non vero mollitia. Unde vel blanditiis magni nemo qui totam quis, natus est.",
-    "user_id": 2
+    "user_id": 2,
+    "book_id": 7
   },
   {
     "text": "Lorem ipsum dolor THID ITERSATION SFGUSDU  UA GAP QWEHF QG sit amet consectetur adipisicing elit. Aut sunt eveniet fugiat libero possimus natus soluta amet sed, dolorum nihil dignissimos? Quisquam ut quos fuga consequatur corrupti voluptate temporibus odio consequuntur sed libero dolorum et voluptatibus, exercitationem sunt perferendis adipisci, omnis totam delectus beatae ea autem! Rem sapiente nemo accusantium deserunt, alias, minus itaque soluta assumenda animi dignissimos natus totam non hic est reiciendis dicta tempore. Repellendus accusamus ex corrupti dolor placeat quisquam magnam rem, ipsa vitae quae odit impedit suscipit consequuntur minus eaque earum ipsum laborum non vero mollitia. Unde vel blanditiis magni nemo qui totam quis, natus est.",
-    "user_id": 3
+    "user_id": 3,
+    "book_id": 14
+  },
+  {
+    "text": "This book rocks! 7/8",
+    "user_id": 3,
+    "book_id": 13
   }
 ]
 

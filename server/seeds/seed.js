@@ -19,13 +19,10 @@ const seedDatabase = async () => {
     returning: true,
   })
 
-  // create book columns, assign a random user to each book
-  for (const book of bookSeedData) {
-    const newBook = await Book.create({
-      ...book,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-    })
-  }
+  const books = await Book.bulkCreate(bookSeedData, {
+    individualHooks: true,
+    returning: true,
+  })
 
   process.exit(0)
 }
