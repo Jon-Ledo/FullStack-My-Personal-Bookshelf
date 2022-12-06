@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { User, Book } = require('../../models')
+const { User, Book, Review } = require('../../models')
 
 // home page (when not logged in)
 router.get('/', async (req, res) => {
@@ -26,9 +26,7 @@ router.get('/about', async (req, res) => {
 router.get('/bookshelf/:id', async (req, res) => {
   try {
     const dbUserData = await User.findByPk(req.params.id, {
-      include: {
-        model: Book,
-      },
+      include: [{ model: Book }, { model: Review }],
     })
 
     const userBookshelf = dbUserData.get({ plain: true })

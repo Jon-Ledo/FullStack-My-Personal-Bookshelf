@@ -19,6 +19,10 @@ Review.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    book_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
   {
     sequelize,

@@ -1,16 +1,19 @@
 const router = require('express').Router()
 const sequelize = require('../../../config/connection')
-const { User, Book } = require('../../../models')
+const { User, Book, Review } = require('../../../models')
 
 // api/books endpoint
 // GET all books
 router.get('/', async (req, res) => {
   try {
     const dbBookData = await Book.findAll({
-      include: {
-        model: User,
-        attributes: ['user_name', 'email'],
-      },
+      include: [
+        {
+          model: User,
+          attributes: ['user_name', 'email'],
+        },
+        { model: Review },
+      ],
     })
 
     const books = dbBookData.map((book) => {
@@ -27,10 +30,13 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const dbBookData = await Book.findByPk(req.params.id, {
-      include: {
-        model: User,
-        attributes: ['user_name', 'email'],
-      },
+      include: [
+        {
+          model: User,
+          attributes: ['user_name', 'email'],
+        },
+        { model: Review },
+      ],
     })
 
     const bookData = await dbBookData.get({ plain: true })
