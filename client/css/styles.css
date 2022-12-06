@@ -15,3 +15,10 @@ h1 {
 .container {
   display: flex;
 }
+
+.row {
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
