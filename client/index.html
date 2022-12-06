@@ -9,6 +9,8 @@
   <title>Bookshelf Index</title>
 </head>
 
+<body>
+  
 <!--Offcanvas navbar Need to figure out how to make it work-->
 <nav class="navbar bg-light fixed-top">
   <div class="container-fluid">
@@ -52,44 +54,56 @@
   </div>
 </nav>
 
-<body>
-  <section>My Book Shelf
-    </section>
+<section>
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
-      <div class="card h-100">
+      <div class="card h-100 box-shadow-hover pointer">
         <img src="./assets/bookcovers.jpg" class="card-img-top" alt="Matt Ridley Unsplash">
         <div class="card-body">
           <h5 class="card-title">book_title</h5>
           <h5 class="card-title">author</h5>
           <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <form action="/action_page.php">
+            <input type="checkbox" id="status1" name="status1" value="Read">
+            <label for="status1"> Read</label><br>
+            <input type="checkbox" id="status2" name="status2" value="In progress">
+            <label for="vehicle2"> In progress</label><br>
+            <input type="checkbox" id="Status3" name="status3" value="Finished">
+            <label for="vehicle3"> Finished</label><br><br>
+          </form>
+          <button type="button" class="btn btn-primary">Update</button>
+          <button type="button" class="btn btn-secondary">Delete</button>
         </div>
       </div>
       
     </div>
     <div class="col">
-      <div class="card h-100">
+      <div class="card h-100 box-shadow-hover pointer">
         <img src="./assets/bookcovers.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">book_title</h5>
           <h5 class="card-title">author</h5>
           <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <button type="button" class="btn btn-primary">Update</button>
+          <button type="button" class="btn btn-secondary">Delete</button>
         </div>
       </div>
     </div>
     <div class="col">
-      <div class="card h-100">
+      <div class="card h-100 box-shadow-hover pointer">
         <img src="./assets/bookcovers.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">book_title</h5>
           <h5 class="card-title">author</h5>
           <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit..</p>
+          <button type="button" class="btn btn-primary">Update</button>
+          <button type="button" class="btn btn-secondary">Delete</button>
         </div>
       </div>
-<div>
         </div>
     </div>
   </div>
+</section>
   <script src="js/script.js"></script>
 </body>
 </html>
