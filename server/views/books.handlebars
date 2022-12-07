@@ -15,7 +15,8 @@
 <section class="bookshelf">
 
 {{#each books}}
-  <div class="book">
+  <div class="book" data-book-id="{{id}}">
+    <button type="button" class="btn-close" id="deleteBtn" aria-label="Close"></button>
     <div class="book-img-container">
       {{#if image_url}}
       <img src="{{image_url}}" alt="{{name}} by {{author}}">
@@ -27,10 +28,10 @@
     <div class="book-content">
       <h3 class="book-title">{{name}}</h3>
       <h5 class="book-author">{{author}}</h5>
-      <p>Book ID: {{id}}</p>
     </div>
   </div>
 {{/each}}
+
 </section>
 
 {{/with}}
