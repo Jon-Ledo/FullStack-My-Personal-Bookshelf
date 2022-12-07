@@ -13,6 +13,11 @@ router.get('/', async (req, res) => {
   res.render('home')
 })
 
+//login page
+router.get('/login', async (req, res) => {
+  res.render('login')
+})
+
 // signup page
 router.get('/sign_up', async (req, res) => {
   res.render('signup')
