@@ -1,6 +1,13 @@
 const router = require('express').Router()
 const { User, Book, Review } = require('../../models')
 
+// TEST PAGE TO RUN FUNCTIONS
+// DELETE BEFORE FINAL PUSH
+router.get('/test', async (req, res) => {
+  res.render('test')
+})
+//DELETE BEFORE FINAL PUSH
+
 // home page (when not logged in)
 router.get('/', async (req, res) => {
   res.render('home')

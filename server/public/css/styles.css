@@ -61,6 +61,27 @@ img {
 .book-img-container {
   width: 250px;
   height: 350px;
+  position: relative;
+}
+
+.book-img-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.book-img-container:hover::after {
+  background-color: #2d2d2d76;
+}
+
+.btn-close {
+  display: none;
+}
+
+.book:hover .btn-close {
+  display: block;
 }
 
 footer {
