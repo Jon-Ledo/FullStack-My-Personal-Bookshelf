@@ -1,7 +1,7 @@
 .main-container {
   width: fit-content;
   block-size: fit-content;
-  margin: 100px;
+  margin: 0px 100px;
   padding: 30px;
   justify-content: center;
   align-content: center;
@@ -39,9 +39,9 @@
   background-color: #f4d03f;
 }
 
-.container {
+/* .container {
   display: flex;
-}
+} */
 
 .containertest {
   border: 3px black;
