@@ -8,7 +8,7 @@ router.get('/test', async (req, res) => {
 })
 //DELETE BEFORE FINAL PUSH
 
-// home page (when not logged in)
+// home page
 router.get('/', async (req, res) => {
   res.render('home')
 })
@@ -16,11 +16,6 @@ router.get('/', async (req, res) => {
 // signup page
 router.get('/sign_up', async (req, res) => {
   res.render('signup')
-})
-
-// login page
-router.get('/login', async (req, res) => {
-  res.render('login')
 })
 
 // about page
