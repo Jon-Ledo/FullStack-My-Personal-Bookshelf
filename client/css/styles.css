@@ -8,12 +8,61 @@ h1 {
   color: crimson;
 }
 
+.main-container {
+  width: fit-content;
+  block-size: fit-content;
+  margin: 100px;
+  padding: 30px;
+  justify-content: center;
+  align-content: center;
+  align-items: baseline;
+  display: flex;
+  column-gap: 20px;
+  border: 2px solid darkslategrey;
+}
+
+
+
+.col-8 {
+  border: 5px solid #F4D03F;
+  background-color: white;
+  max-width: 500px;
+  font-size: 20px;
+  padding: 50px;
+  margin: auto;
+  text-align: center;
+}   
+
+.col-4 {
+  border: 5px solid #F4D03F;
+  background-color: white;
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+}  
+
+
+
+/*div.ex2 {
+  max-width: 500px;
+  margin: auto;
+  border: 3px solid #73AD21;
+}*/
+
 .btn {
   background-color: #F4D03F;
 }
 
 .container {
   display: flex;
+}
+
+.containertest {
+  border: 3px black;
+}
+
+.rowtest {
+  border: 3px black;
 }
 
 .row {
