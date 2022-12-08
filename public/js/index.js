@@ -86,16 +86,18 @@ const deleteBook = (id) =>
     },
   })
 
- // nav bar scroll function 
-window.onscroll = function() {myFunction()};
+// nav bar scroll function
+window.onscroll = function () {
+  myFunction()
+}
 
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
+const navbar = document.getElementById('navbar')
+const sticky = navbar.offsetTop
 
 function myFunction() {
   if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
+    navbar.classList.add('sticky')
   } else {
-    navbar.classList.remove("sticky");
+    navbar.classList.remove('sticky')
   }
 }
