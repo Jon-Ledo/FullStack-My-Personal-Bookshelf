@@ -2,6 +2,17 @@ body {
   background-color: #fdf4cf;
 }
 
+.header {
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+
 nav {
   height: 100px;
   background-color: #f4d03f;
@@ -33,6 +44,20 @@ a {
   text-shadow: #3e3e3e 1px 1px;
 }
 
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
 .hero-image {
   background-image: url(/images/jessica-ruscello-OQSCtabGkSY-unsplash.jpg);
   background-repeat: no-repeat;
@@ -46,7 +71,7 @@ a {
 
 .card {
   position: absolute;
-  top: 90px;
+  top: 70px;
   border: #2d2d2d solid 1px;
 }
 
@@ -71,7 +96,10 @@ img {
 .book-img-container {
   width: 250px;
   height: 350px;
+  padding-left: 40px;
+  padding-top: 15px;
   position: relative;
+  justify-content: space-evenly;
 }
 
 .book-img-container::after {
@@ -94,7 +122,15 @@ img {
   display: block;
 }
 
-footer {
+
+.book-content {
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+
+
+/*footer {
   color: white;
   text-align: center;
   bottom: 0;
@@ -105,4 +141,24 @@ footer {
   height: 50px;
   background: #2d2d2d;
   border-top: 12px solid #3e3e3e;
+}*/
+
+#content-wrap {
+  padding-bottom: 2.5rem;   /*Footer height*/
+}
+
+#footer {
+  color: white;
+  text-align: center;
+  background: #2d2d2d;
+  border-top: 12px solid #3e3e3e;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /*Footer height*/ 
+}
+
+.about {
+  padding-left: 30px;
 }
