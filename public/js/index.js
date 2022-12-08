@@ -70,6 +70,33 @@ const deleteBook = (id) =>
   })
 
 if (window.location.pathname.includes('/bookshelf')) {
+  
+let addBookBtn
+let bookName
+let authorName
+
+// convert from test page to real page later
+
+  addBookBtn = document.querySelector('#addBook')
+  bookName = document.querySelector('#bookname')
+  authorName = document.querySelector('#author')
+
+  addBookBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    const newBook = {
+      name: bookName.value,
+      author: authorName.value,
+      user_id: 1,
+    }
+    // NOTE the userID is hard coded until authentication can handle this
+    console.log('BOOK NAME:', newBook)
+
+    addBook(newBook)
+  })
+
+  
+  
+  
   const deleteBtns = document.querySelectorAll('#deleteBtn')
 
   deleteBtns.forEach((btn) => {
