@@ -85,6 +85,3 @@ if (window.location.pathname.includes('/bookshelf')) {
   const splitWindowPath = window.location.pathname.split('/bookshelf/') // <-- get user id value of current logged in user
   const userId = Number(splitWindowPath[1]) // <-- save to this
 }
-
-const seedDatabase = require('../../seeds/seed')
-seedDatabase()
