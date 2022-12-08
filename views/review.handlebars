@@ -1,0 +1,37 @@
+{{> navbar}}
+<h1>Review</h1>
+
+{{#with bookData}}
+{{#each reviews}}
+REVIEW ID: {{id}}
+<br>
+TEXT: {{text}}
+<br>
+CREATED AT: {{createdAt}}
+{{/each}}
+
+<hr>
+<br>
+USERNAME: {{user.user_name}} ID: {{user.id}}
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+BOOKID: {{id}}
+<br>
+{{name}}
+<br>
+{{author}}
+<br>
+{{image_url}}
+<br>
+{{is_read}}
+
+
+
+
+{{/with}}

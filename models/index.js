@@ -10,7 +10,7 @@ Book.belongsTo(User, {
   foreignKey: 'user_id',
 })
 
-User.hasOne(Review, {
+User.hasMany(Review, {
   foreignKey: 'user_id',
 })
 
