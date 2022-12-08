@@ -1,13 +1,6 @@
 const router = require('express').Router()
 const { User, Book, Review } = require('../../models')
 
-// TEST PAGE TO RUN FUNCTIONS
-// DELETE BEFORE FINAL PUSH
-router.get('/test', async (req, res) => {
-  res.render('test')
-})
-//DELETE BEFORE FINAL PUSH
-
 // home page
 router.get('/', async (req, res) => {
   res.render('home')
@@ -49,5 +42,12 @@ router.get('/bookshelf/:id', async (req, res) => {
 // router.get('*', (req, res) => {
 //   res.render('error')
 // })
+
+// TEST PAGE TO RUN FUNCTIONS
+// DELETE BEFORE FINAL PUSH
+router.get('/test', async (req, res) => {
+  res.render('test')
+})
+//DELETE BEFORE FINAL PUSH
 
 module.exports = router
