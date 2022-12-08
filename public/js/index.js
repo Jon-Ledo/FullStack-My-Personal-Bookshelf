@@ -1,17 +1,63 @@
-// -------------- test api calls  --------------------
-fetch('/api/books')
-  .then((response) => response.json())
-  .then((data) => console.log('BOOKS DATA', data))
+if (window.location.pathname.includes('/bookshelf')) {
+  // get current user's ID (temporary)
+  const splitWindowPath = window.location.pathname.split('/bookshelf/') // <-- get user id value of current 'logged in' user from URL
+  const userId = Number(splitWindowPath[1]) // <-- save number to this variable
 
-fetch('/api/users')
-  .then((response) => response.json())
-  .then((data) => console.log('USERS DATA', data))
+  // DOM variables
+  const addBookBtn = document.querySelector('#addBook')
+  const bookName = document.querySelector('#bookname')
+  const authorName = document.querySelector('#author')
+  const deleteBtns = document.querySelectorAll('#deleteBtn')
 
-fetch('/api/reviews')
-  .then((response) => response.json())
-  .then((data) => console.log('REVIEWS DATA', data))
-// ---------------------------------------------------------------
+  // Event Listeners
+  addBookBtn.addEventListener('click', (e) => {
+    addBook(e)
+  })
+  addBookBtn.addEventListener('submit', (e) => {
+    addBook(e)
+  })
 
+  deleteBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      const bookId = btn.parentElement.dataset.bookId
+      deleteBookFromDB(e, bookId)
+    })
+  })
+
+  // FUNCTIONS
+  const addBook = (e) => {
+    e.preventDefault()
+    // build the object for POST request
+    const newBook = {
+      name: bookName.value,
+      author: authorName.value,
+      user_id: userId,
+    }
+
+    // call POST request
+    postBook(newBook).then(() => {
+      window.location.reload()
+    })
+
+    // reset form fields
+    bookName.value = ''
+    authorName.value = ''
+  }
+
+  const deleteBookFromDB = (e, bookId) => {
+    e.stopPropagation() // just in case
+
+    deleteBook(bookId).then(() => {
+      window.location.reload() // <-- janky, but works
+    })
+  }
+} // end of bookshelf/:id
+
+// *********************************
+// ******** FETCH FUNCTIONS ********
+// *********************************
+
+// GET books
 const getBooks = () => {
   fetch('/api/books', {
     method: 'GET',
@@ -21,9 +67,8 @@ const getBooks = () => {
   })
 }
 
-// -----------------------------------------------------------------------------------------------
 // ADD BOOK USING FORM DETAILS
-const addBook = (newBook) =>
+const postBook = (newBook) =>
   fetch('/api/books', {
     method: 'POST',
     headers: {
@@ -31,34 +76,6 @@ const addBook = (newBook) =>
     },
     body: JSON.stringify(newBook),
   })
-
-// ---------------------------------------------------------------------------
-// setup necessary because of the different pathnames. some variables don't exist on other pages, and will prevent any other JS to run correctly
-let addBookBtn
-let bookName
-let authorName
-
-// convert from test page to real page later
-if (window.location.pathname === '/test') {
-  addBookBtn = document.querySelector('#addBook')
-  bookName = document.querySelector('#bookname')
-  authorName = document.querySelector('#author')
-
-  addBookBtn.addEventListener('click', (e) => {
-    e.preventDefault()
-    const newBook = {
-      name: bookName.value,
-      author: authorName.value,
-      user_id: 1,
-    }
-    // NOTE the userID is hard coded until authentication can handle this
-    console.log('BOOK NAME:', newBook)
-
-    addBook(newBook)
-  })
-}
-// ----------------------------------------------------------------------------------------------------------
-// ----------------------------------------------------------------------------------------------------------
 
 // DELETE BOOK
 const deleteBook = (id) =>
@@ -68,20 +85,3 @@ const deleteBook = (id) =>
       'Content-Type': 'application/json',
     },
   })
-
-if (window.location.pathname.includes('/bookshelf')) {
-  const deleteBtns = document.querySelectorAll('#deleteBtn')
-
-  deleteBtns.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation() // just in case
-      const bookId = btn.parentElement.dataset.bookId
-      deleteBook(bookId).then(() => {
-        window.location.reload() // <-- janky, but works
-      })
-    })
-  })
-
-  const splitWindowPath = window.location.pathname.split('/bookshelf/') // <-- get user id value of current logged in user
-  const userId = Number(splitWindowPath[1]) // <-- save to this
-}

@@ -1,16 +1,10 @@
-{{!-- PLACEHOLDER FILE UNTIL FINAL DESIGN CHOSEN --}}
-
-{{!-- ADD form here for new books --}}
+{{> navbar}}
 
 {{#with userBookshelf}}
 
-  <h1>Welcome back to your bookshelf {{user_name}}</h1>
+<h1>Welcome back to your bookshelf {{user_name}}</h1>
 
-
-{{!-- 
-<p>User email: {{email}}</p>
-<p>User password: {{password}}</p> 
---}}
+{{> addbookForm}}
 
 <section class="bookshelf">
 
@@ -35,6 +29,3 @@
 </section>
 
 {{/with}}
-
-
-{{!-- PLACEHOLDER FILE UNTIL FINAL DESIGN CHOSEN --}}
