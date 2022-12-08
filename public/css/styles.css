@@ -110,6 +110,7 @@ img {
   right: 0;
   bottom: 0;
 }
+
 .book-img-container:hover::after {
   background-color: #2d2d2d76;
 }
