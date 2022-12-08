@@ -37,6 +37,44 @@ router.get('/bookshelf/:id', async (req, res) => {
   }
 })
 
+// reviews page
+router.get('/reviews/:id', async (req, res) => {
+  try {
+    const dbBookData = await Book.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['user_name', 'email', 'id'],
+        },
+        { model: Review },
+      ],
+    })
+
+    const bookData = await dbBookData.get({ plain: true })
+
+    res.render('review', { bookData })
+  } catch (error) {
+    res.render('error')
+  }
+})
+
+// router.get('/reviews/:id', async (req, res) => {
+//   try {
+//     const dbReviewData = await Review.findByPk(req.params.id, {
+//       include: [
+//         { model: User, attributes: ['id', 'user_name'] },
+//         { model: Book },
+//       ],
+//     })
+
+//     const review = dbReviewData.get({ plain: true })
+
+//     res.render('review', { review })
+//   } catch (error) {
+//     res.render('error')
+//   }
+// })
+
 // error page, catch all bad requests here
 // NOTE currently blocking API request too. Disabled for now
 // router.get('*', (req, res) => {
