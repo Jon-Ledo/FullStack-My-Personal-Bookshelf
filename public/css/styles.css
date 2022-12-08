@@ -5,6 +5,7 @@ body {
 nav {
   height: 100px;
   background-color: #f4d03f;
+  border-bottom: 10px solid #cbae3b;
 }
 
 a {
@@ -51,7 +52,6 @@ a {
 
 h1 {
   font-size: 30px;
-  color: red;
 }
 
 img {
