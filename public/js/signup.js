@@ -5,7 +5,7 @@ if (window.location.pathname.includes('/sign_up')) {
   newAccountBtn.addEventListener('click', (e) => {
     e.preventDefault()
     // simple code to redirect
-    window.location.assign('/')
+    window.location.assign('/login')
   })
 
   // maybe create small modal to tell user their account was created, and to proceed to log in
