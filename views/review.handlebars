@@ -1,37 +1,71 @@
 {{> navbar}}
-<h1>Review</h1>
+<h1>Reviews Page</h1>
+<hr>
 
 {{#with bookData}}
-{{#each reviews}}
-REVIEW ID: {{id}}
-<br>
-TEXT: {{text}}
-<br>
-CREATED AT: {{createdAt}}
-{{/each}}
+  <h1>Book Data</h1>
+  book ID : {{id}}
+  <br>
+  <br>
+  Book name : {{name}}
+  <br>
+  <br>
+  Author : {{author}}
+  <br>
+  <br>
+  <img src="{{image_url}}" alt="{{name}}, by {{author}}" >
+  <br>
+  <br>
+  is read? : {{is_read}}
+  <br>
+  <br>
+  <p id="secretSelector">{{user_id}}</p>
+  <br>
+  <br>
+  created at : {{format_date createdAt}}, {{format_time createdAt}}
+  <br>
+  <br>
+  <hr>
 
-<hr>
-<br>
-USERNAME: {{user.user_name}} ID: {{user.id}}
-<hr>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-BOOKID: {{id}}
-<br>
-{{name}}
-<br>
-{{author}}
-<br>
-{{image_url}}
-<br>
-{{is_read}}
+  <h2>USER Review Data</h2>
+  <hr>
 
 
+  {{#if user_reviews}}
+    {{#each user_reviews}}
+      <p>username :  <span id="userName">{{user_name}} </span></p>
+      <br>
+      users email : {{email}}
+      <br>
+      user Id : {{id}} <p data-user-id="{{id}}">review component value here</p>
+      <br>
+      review: {{review.text}}
+      <br>
+      review ID: {{review.id}}
+      <br>
+      created at: {{format_date review.createdAt}}, {{format_time review.createdAt}}
+      <br>
+      lastupdated at : {{format_date review.updatedAt}}, {{format_time review.updatedAt}}
+      <hr>
+    {{/each}}
 
+  {{!-- Render this if the user_reviews array is empty --}}
+  {{else}}
+    <h1>No reviews yet</h1>
+  {{/if}}
 
 {{/with}}
+
+
+
+
+<form class="col-md-4">
+  <div class="form-floating mb-3">
+    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 100px"></textarea>
+    <label for="floatingTextarea">Submit a review</label>
+  </div>
+  
+  <button type="submit" class="btn btn-primary" id="submitReview">Submit</button>
+  <button type="submit" class="btn btn-primary" id="editReview">Edit Review</button>
+</form>
+  <button type="submit" class="btn btn-primary" id="deleteReview">Delete Review</button>

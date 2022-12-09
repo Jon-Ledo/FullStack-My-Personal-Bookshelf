@@ -37,7 +37,7 @@ router.get('/bookshelf/:id', async (req, res) => {
   }
 })
 
-// reviews page
+// reviews page based on book id
 router.get('/reviews/:id', async (req, res) => {
   try {
     const dbBookData = await Book.findByPk(req.params.id, {
@@ -45,8 +45,9 @@ router.get('/reviews/:id', async (req, res) => {
         {
           model: User,
           attributes: ['user_name', 'email', 'id'],
+          through: Review,
+          as: 'user_reviews',
         },
-        { model: Review },
       ],
     })
 
