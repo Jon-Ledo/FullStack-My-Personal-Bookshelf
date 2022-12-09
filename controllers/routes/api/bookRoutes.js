@@ -30,12 +30,21 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const dbBookData = await Book.findByPk(req.params.id, {
+      // include: [
+      //   {
+      //     model: User,
+      //     attributes: ['user_name', 'email'],
+      //   },
+      //   { model: Review },
+      // ],
       include: [
         {
           model: User,
-          attributes: ['user_name', 'email'],
+          attributes: ['user_name', 'email', 'id'],
+          through: Review,
+          as: 'user_reviews',
         },
-        { model: Review },
+        // { model: Review },
       ],
     })
 

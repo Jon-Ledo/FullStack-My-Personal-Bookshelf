@@ -27,4 +27,12 @@ Review.belongsTo(Book, {
   foreignKey: 'book_id',
 })
 
+Book.belongsToMany(User, {
+  through: {
+    model: Review,
+    unique: false,
+  },
+  as: 'user_reviews',
+})
+
 module.exports = { User, Book, Review }
