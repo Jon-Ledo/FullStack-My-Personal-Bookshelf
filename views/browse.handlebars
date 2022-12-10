@@ -1,0 +1,34 @@
+{{> navbar}}
+{{> hero}}
+
+<div class="header">
+  <h1>Start browsing</h1>
+</div>
+
+
+<section class="bookshelf content">
+
+  {{#each books}}
+  <div class="book" data-book-id="{{id}}">
+    <button type="button" class="btn-close" id="deleteBtn" aria-label="Close"></button>
+
+    <a href="/reviews/{{id}}">
+
+
+      <div class="book-img-container">
+        {{#if image_url}}
+        <img src="{{image_url}}" alt="{{name}} by {{author}}">
+        {{else}}
+        <img src="/images/unavailable-cover.jpg" alt="{{name}} by {{author}}">
+        {{/if}}
+
+      </div>
+    </a>
+    <div class="book-content">
+      <h3 class="book-title">{{name}}</h3>
+      <h5 class="book-author">{{author}}</h5>
+    </div>
+  </div>
+  {{/each}}
+
+</section>

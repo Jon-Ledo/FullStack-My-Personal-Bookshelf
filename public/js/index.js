@@ -88,6 +88,7 @@ const deleteBook = (id) =>
 
 // nav bar scroll function
 window.onscroll = function () {
+  console.log(sticky)
   myFunction()
 }
 

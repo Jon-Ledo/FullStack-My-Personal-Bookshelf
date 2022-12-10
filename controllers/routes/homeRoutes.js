@@ -21,6 +21,30 @@ router.get('/about', async (req, res) => {
   res.render('about')
 })
 
+// browse all books
+router.get('/browse', async (req, res) => {
+  try {
+    const dbBookData = await Book.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['user_name', 'email', 'id'],
+          through: Review,
+          as: 'user_reviews',
+        },
+      ],
+    })
+
+    const books = dbBookData.map((book) => {
+      return book.get({ plain: true })
+    })
+
+    res.render('browse', { books })
+  } catch (error) {
+    res.render('error')
+  }
+})
+
 // after authentication
 // bookshelf page
 router.get('/bookshelf/:id', async (req, res) => {
