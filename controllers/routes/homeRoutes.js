@@ -84,23 +84,23 @@ router.get('/reviews/:id', async (req, res) => {
 })
 
 // catch all bad requests here, redirect to browse books page
-router.get('*', async (req, res) => {
-  const dbBookData = await Book.findAll({
-    include: [
-      {
-        model: User,
-        attributes: ['user_name', 'email', 'id'],
-        through: Review,
-        as: 'user_reviews',
-      },
-    ],
-  })
+// router.get('*', async (req, res) => {
+//   const dbBookData = await Book.findAll({
+//     include: [
+//       {
+//         model: User,
+//         attributes: ['user_name', 'email', 'id'],
+//         through: Review,
+//         as: 'user_reviews',
+//       },
+//     ],
+//   })
 
-  const books = dbBookData.map((book) => {
-    return book.get({ plain: true })
-  })
+//   const books = dbBookData.map((book) => {
+//     return book.get({ plain: true })
+//   })
 
-  res.render('browse', { books })
-})
+//   res.render('browse', { books })
+// })
 
 module.exports = router

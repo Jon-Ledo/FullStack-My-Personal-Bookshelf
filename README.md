@@ -1,126 +1,79 @@
-# 15 Project 2: Interactive Full-Stack Application
+# Fullstack Collaborative Effort - Personal Bookshelf Database
 
-Projects play a key role in your journey to becoming a full-stack web developer. As you enter the last phase of the boot camp, you’ll begin to apply for development jobs. If you want to land interviews, your portfolio must feature high-quality deployed examples of your work—-and you can use your finished projects for that very purpose.
+![license badge](./Assets/license-badge.svg)
 
-As your first opportunity to show employers your collaborative skills and coding abilities, this particular project will be a focal point of your portfolio. Employers want to see what you can do, but they also want to see how you work with other developers. The more examples of deployed collaborative work you have in your portfolio, the more likely you are to get an interview and a job.
+- [link to live site](https://guarded-sierra-08744.herokuapp.com/)
 
-## Project Requirements
+## Description
 
-You and your group will use everything you’ve learned over the past six modules to create a real-world full-stack application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
+A web page designed to store book data, user data and reviews data in a SQL database, to be rendered on a browser for the user to interact with. The user will have the ability to look at a catalogue of books on the website, look at reviews for a book, add them to their own "personal bookshelf", as well as update and delete books and reviews.
 
-* Use Node.js and Express.js to create a RESTful API.
+![routes](./Assets/bookshelf-routs.JPG)
 
-* Use Handlebars.js as the template engine.
+## Table of Contents
 
-* Use MySQL and the Sequelize ORM for the database.
+- [Packages Used](#packages)
+- [Preview](#preview)
+- [Installation](#installation)
+- [License](#license)
 
-* Have both GET and POST routes for retrieving and adding new data.
+## Packages
 
-* Use at least one new library, package, or technology that we haven’t discussed.
+Project put together using the following libraries/packages:
 
-* Have a folder structure that meets the MVC paradigm.
+- [bcrypt](https://www.npmjs.com/package/bcrypt)
+- [cors](https://www.npmjs.com/package/cors)
+- [dotenv](https://www.npmjs.com/package/dotenv)
+- [Express.js](https://expressjs.com/)
+- [Express-handlebars](https://www.npmjs.com/package/express-handlebars)
+- [Express-session](https://www.npmjs.com/package/express-session)
+- [handlebars](https://handlebarsjs.com/)
+- [mySql2](https://www.npmjs.com/package/mysql2)
+- [passport](https://www.npmjs.com/package/mysql2)
+- [passport-local](https://www.npmjs.com/package/passport-local)
+- [Sequelize](https://sequelize.org/)
 
-* Include authentication (express-session and cookies).
+## Preview
 
-* Protect API keys and sensitive information with environment variables.
+- ![preview-image-for-site](./Assets/bookshelf-image.JPG)
 
-* Be deployed using Heroku (with data).
+## Installation
 
-* Have a polished UI.
+1. Create the database in MySQL workbench using the schema that's found in the db folder
 
-* Be responsive.
+2. Setup the database connection now. Create a .env file and put the following code in it. However replace the contents of DB_USER and DB_PASSWORD to match your MySQL workbench information. (ex. 'root' and 'coolpassword123')
 
-* Be interactive (i.e., accept and respond to user input).
+```
+DB_NAME='ecommerce_db'
+DB_USER='<your_user_here>'
+DB_PASSWORD='<your_password_here>'
+```
 
-* Meet good-quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
+3. Once the database has been made, it's time to seed it with data. Return to your terminal (make sure you are in this projects working directory) and run the command:
 
-* Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
+```
+npm run seed
+```
 
-## Presentation Requirements
+4. After database has been seeded, it's time to run the server running the command:
 
-Use this [project presentation template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to address the following: 
+```
+node server.js
+```
 
-* Elevator pitch: a one minute description of your application
+5. Navigate to POSTMAN, and start testing any endpoints for GET, POST, PUT and DELETE
 
-* Concept: What is your user story? What was your motivation for development?
+```
+localhost:3001/api/users
+localhost:3001/api/users{id}
+localhost:3001/api/books
+localhost:3001/api/books/{id}
+localhost:3001/api/reviews
+localhost:3001/api/reviews/{id}
+```
 
-* Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
+## License
 
-* Demo: Show your stuff!
+[![license badge](./Assets/license-badge.svg)](https://choosealicense.com/licenses/mit/)
 
-* Directions for Future Development
-
-* Links to the deployed application and the GitHub repository. Use the [Guide to Deploy with Heroku and MySQL](https://coding-boot-camp.github.io/full-stack/heroku/deploy-with-heroku-and-mysql) on The Full-Stack Blog if you need a reminder on how to deploy to Heroku.
-
-## Grading Requirements
-
-This project is graded based on the following criteria:
-
-### Technical Acceptance Criteria: 25%
-
-* Satisfies the following code requirements:
-
-  * Application uses a Node.js and Express.js back end and uses both GET and POST routes for retrieving and adding new data.
-
-  * Application has a folder structure that meets the MVC paradigm and uses Handlebars.js as the template engine.
-
-  * Application is backed by a MySQL database with a Sequelize ORM and protects API keys and sensitive information with environment variables.
-
-  * Application includes user authentication (express-session and cookies).
-
-  * Application uses at least one new library, package, or technology not covered in class.
-
-### Concept 10%
-
-* Application should be a unique and novel idea.
-
-* Your group should clearly and concisely articulate your project idea.
-
-### Deployment: 20%
-
-* Application deployed at live URL on Heroku and loads with no errors.
-
-* Application GitHub URL submitted.
-
-### Repository Quality: 10%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id-naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application is responsive.
-
-### Presentation 10%
-
-* Your group should present using a slide deck.
-
-* Every group member should speak during the presentation.
-
-* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
-
-### Collaboration 10%
-
-* There are no major disparities in the number of GitHub contributions between group members.
-
-## How to Submit Your Interactive Full-Stack Project
-
-**Each member of your group** is required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a README describing the project.
-
----
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+For more information about the licensing of this project, please click on the badge above, or follow this link https://choosealicense.com/licenses/mit/
