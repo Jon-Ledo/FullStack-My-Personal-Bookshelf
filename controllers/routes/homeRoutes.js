@@ -83,34 +83,24 @@ router.get('/reviews/:id', async (req, res) => {
   }
 })
 
-// router.get('/reviews/:id', async (req, res) => {
-//   try {
-//     const dbReviewData = await Review.findByPk(req.params.id, {
-//       include: [
-//         { model: User, attributes: ['id', 'user_name'] },
-//         { model: Book },
-//       ],
-//     })
+// catch all bad requests here, redirect to browse books page
+router.get('*', async (req, res) => {
+  const dbBookData = await Book.findAll({
+    include: [
+      {
+        model: User,
+        attributes: ['user_name', 'email', 'id'],
+        through: Review,
+        as: 'user_reviews',
+      },
+    ],
+  })
 
-//     const review = dbReviewData.get({ plain: true })
+  const books = dbBookData.map((book) => {
+    return book.get({ plain: true })
+  })
 
-//     res.render('review', { review })
-//   } catch (error) {
-//     res.render('error')
-//   }
-// })
-
-// error page, catch all bad requests here
-// NOTE currently blocking API request too. Disabled for now
-// router.get('*', (req, res) => {
-//   res.render('error')
-// })
-
-// TEST PAGE TO RUN FUNCTIONS
-// DELETE BEFORE FINAL PUSH
-router.get('/test', async (req, res) => {
-  res.render('test')
+  res.render('browse', { books })
 })
-//DELETE BEFORE FINAL PUSH
 
 module.exports = router

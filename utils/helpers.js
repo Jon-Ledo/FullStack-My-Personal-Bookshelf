@@ -8,4 +8,7 @@ module.exports = {
       date
     ).getDate()}/${new Date(date).getFullYear()}`
   },
+  // format_title_about: () => {
+  //   document.title = 'About'
+  // },
 }
