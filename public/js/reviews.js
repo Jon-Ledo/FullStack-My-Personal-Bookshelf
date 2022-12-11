@@ -1,4 +1,7 @@
 if (window.location.pathname.includes('/reviews')) {
+  // change document title
+  document.title = 'Reviews for ...'
+
   // get current user's ID (temporary)
   const splitWindowPath = window.location.pathname.split('/reviews/') // <-- get book id value of current page being viewed from URL
   const bookId = Number(splitWindowPath[1]) // <-- save number to this variable
