@@ -39,12 +39,12 @@ Project put together using the following libraries/packages:
 
 ## Installation
 
-1. Create the database in MySQL workbench using the schema that's found in the db folder
+1. After downloading a copy of the repo, create the database in MySQL workbench using the schema that's found in the db folder
 
 2. Setup the database connection now. Create a .env file and put the following code in it. However replace the contents of DB_USER and DB_PASSWORD to match your MySQL workbench information. (ex. 'root' and 'coolpassword123')
 
 ```
-DB_NAME='ecommerce_db'
+DB_NAME='bookshelf_db'
 DB_USER='<your_user_here>'
 DB_PASSWORD='<your_password_here>'
 ```
