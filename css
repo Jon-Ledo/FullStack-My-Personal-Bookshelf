@@ -1,0 +1,17 @@
+*{
+    margin:0px
+    padding : 0px
+    font-family: "Times New Roman", serif;
+    box-sizing : border-box;
+}
+a{
+    text-decoration: none;
+}
+#review{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+     flex-direction: column;
+     width: 100%;
+
+}
