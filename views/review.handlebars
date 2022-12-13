@@ -4,13 +4,15 @@
   <h1 class="text-center book-name mt-3 mb-5">Reviews for <span class="docTitle">{{name}}</span></h1>
 
   <div class="row">
-    <div class="book-info-container col-md-4">
+    <div class="book-info-container col-md-4" data-user="m">
       <img src="{{image_url}}" alt="{{name}}, by {{author}}">
-      {{!-- book ID : {{id}} --}}
-      Book name : {{name}}
-      <br>
-      Author : {{author}}
-      <br>
+
+      <p>{{name}}</p>
+      
+      <p>{{author}}</p> 
+      {{!-- until logged in status may be shown --}}
+      <p class="hidden" id="hiddenUserName">{{user.user_name}}</p> 
+      
     </div>
     
     {{!-- Form to add a review --}}
@@ -38,7 +40,7 @@
 
         <div class="profile-img"></div>
       
-        <p class="name-user mb-1"><span id="userName">{{user_name}} </span></p>
+        <p class="name-user mb-1 usernames"><span id="userName">{{user_name}}</span></p>
         <p class="subtitle">@{{email}}</p>
       
         {{!-- stars --}}
@@ -69,11 +71,6 @@
   </div>{{!-- row div --}}
 </section>
 
-{{!-- imported stuff --}}
-
-<hr>
-  <p id="secretSelector">{{user_id}} this is the secret selector</p>
-<hr>
-
+<p class="hidden" id="secretSelector">{{user_id}}</p>
 
 {{/with}}
