@@ -19,9 +19,23 @@
 </head>
 <body>
   {{> navbar}}
+
+   <!-- If the user is logged in, show a logout button -->
+{{#if loggedIn}}
+    {{else}}
+    <!-- Otherwise, show a link to login -->
+    <a href="/login">Login</a>
+    {{/if}}
+
+
   <main class="main">
     {{{body}}}
   </main>
+  <!-- If the user is logged in, load the JS script for when they logout -->
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+
 <footer id="footer">copyright </footer>
 
 </body>
