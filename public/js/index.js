@@ -1,4 +1,8 @@
 if (window.location.pathname.includes('/bookshelf')) {
+  // change document title
+  const docTitle = document.querySelector('#docTitle')
+  document.title = `${docTitle.textContent}'s Bookshelf`
+
   // get current user's ID (temporary)
   const splitWindowPath = window.location.pathname.split('/bookshelf/') // <-- get user id value of current 'logged in' user from URL
   const userId = Number(splitWindowPath[1]) // <-- save number to this variable
@@ -8,6 +12,7 @@ if (window.location.pathname.includes('/bookshelf')) {
   const bookName = document.querySelector('#bookname')
   const authorName = document.querySelector('#author')
   const deleteBtns = document.querySelectorAll('#deleteBtn')
+  const readBtns = document.querySelectorAll('#readBtn')
 
   // Event Listeners
   addBookBtn.addEventListener('click', (e) => {
@@ -21,6 +26,28 @@ if (window.location.pathname.includes('/bookshelf')) {
     btn.addEventListener('click', (e) => {
       const bookId = btn.closest('.book').dataset.bookId
       deleteBookFromDB(e, bookId)
+    })
+  })
+
+  readBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault()
+      const bookId = btn.closest('.book').dataset.bookId
+      console.log(bookId)
+      let isReadString = btn.dataset.isRead
+      let isReadBoolean = isReadString === 'true' // return boolean type
+
+      const updatedValue = {
+        is_read: !isReadBoolean,
+      }
+
+      editBoolean(bookId, updatedValue).then(() => {
+        if (isReadBoolean) {
+          isReadString = 'true'
+        } else {
+          isReadString = 'false'
+        }
+      })
     })
   })
 
@@ -51,7 +78,7 @@ if (window.location.pathname.includes('/bookshelf')) {
       window.location.reload() // <-- janky, but works
     })
   }
-} // end of bookshelf/:id
+}
 
 // *********************************
 // ******** FETCH FUNCTIONS ********
@@ -84,4 +111,14 @@ const deleteBook = (id) =>
     headers: {
       'Content-Type': 'application/json',
     },
+  })
+
+// UPDATE isRead Boolean
+const editBoolean = (id, bool) =>
+  fetch(`/api/books/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(bool),
   })
