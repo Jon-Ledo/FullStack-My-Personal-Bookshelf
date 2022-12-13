@@ -12,14 +12,14 @@
       <p>{{author}}</p> 
       {{!-- until logged in status may be shown --}}
       <p class="hidden" id="hiddenUserName">{{user.user_name}}</p> 
-      
+    
     </div>
     
     {{!-- Form to add a review --}}
     <form class="col-md-6 mb-5">
       <div class="form-floating mb-3">
         <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
-          style="height: 100px"></textarea>
+          style="height: 250px"></textarea>
         <label for="floatingTextarea">Submit a review</label>
       </div>
     
@@ -30,7 +30,7 @@
     {{!-- form end --}}
 
 
-    <h2 class="fs-1 text-center my-5 book-name">Let's talk about it!</h2>
+    <h1 class="fs-1 text-center my-5 book-name">Let's talk about it!</h1>
 
 
     {{#if user_reviews}}

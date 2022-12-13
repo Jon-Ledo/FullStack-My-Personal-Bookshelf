@@ -1,11 +1,11 @@
 .book-name {
-  font-size: 2.2rem;
+  font-size: 30px;
   font-weight: 500;
   /* background-color: aliceblue; */
   padding: 10px 20px;
-  border: 3px solid #73ad21;
-  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
-  background-color: bisque;
+  /*border: 3px solid #73ad21;
+  /*box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+  background-color: bisque;*/
 }
 
 .reader-review p {
@@ -65,7 +65,7 @@
 }
 
 img {
-  margin: 0;
+ margin: 0;
 }
 
 .hidden {
