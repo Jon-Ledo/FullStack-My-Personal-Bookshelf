@@ -213,3 +213,12 @@ img {
   font-size: 15px;
   text-align: left;
 }
+
+.fa-circle-check {
+  font-size: 24px;
+  color: green;
+}
+
+.hide {
+  display: none;
+}
