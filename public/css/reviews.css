@@ -67,3 +67,7 @@
 img {
   margin: 0;
 }
+
+.hidden {
+  opacity: 0;
+}

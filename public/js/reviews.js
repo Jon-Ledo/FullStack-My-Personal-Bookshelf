@@ -1,6 +1,7 @@
 if (window.location.pathname.includes('/reviews')) {
   // change document title
-  document.title = 'Reviews for ...'
+  const docTitle = document.querySelector('.docTitle')
+  document.title = `Reviews for ${docTitle.textContent}`
 
   // get current user's ID (temporary)
   const splitWindowPath = window.location.pathname.split('/reviews/') // <-- get book id value of current page being viewed from URL
@@ -10,21 +11,34 @@ if (window.location.pathname.includes('/reviews')) {
   const reviewBtn = document.querySelector('#submitReview')
   const secretSelector = document.querySelector('#secretSelector')
   const userId = Number(secretSelector.textContent) // get current users id
-  const userName = document.querySelector('#userName')
+  const hiddenUserName = document.querySelector('#hiddenUserName')
   const editReviewBtn = document.querySelector('#editReview')
   const deleteReviewBtn = document.querySelector('#deleteReview')
+  const reviewContainers = document.querySelectorAll('.reader-review')
 
   // event listeners
   reviewBtn.addEventListener('click', (e) => {
     addReview(e)
   })
+
   editReviewBtn.addEventListener('click', (e) => {
-    editReview(e)
+    editUserReview(e)
   })
+
   deleteReviewBtn.addEventListener('click', (e) => {
-    console.log('clicked')
-    console.log(deleteReviewBtn)
-    deleteReviewFromDB(e, 8) // hard coded for now
+    e.preventDefault()
+
+    reviewContainers.forEach((review) => {
+      const userReviewId = Number(review.dataset.reviewId)
+
+      // DOM traversal
+      const reviewer = review.parentElement.children[1].firstChild.textContent
+
+      if (hiddenUserName.textContent === reviewer) {
+        // delete user's review
+        deleteReviewFromDB(e, userReviewId)
+      }
+    })
   })
 
   // add a review
@@ -49,13 +63,28 @@ if (window.location.pathname.includes('/reviews')) {
   }
 
   // edit a review
-  const editReview = (e) => {
-    // check to see if review-component has current user
+  const editUserReview = (e) => {
     e.preventDefault()
-    if (userName.textContent) {
-      console.log('edit working')
-      // no logic yet
-    }
+    // check to see if review-component has current user
+    reviewContainers.forEach((review) => {
+      // const userName = document.querySelector('#userName')
+      // other validating options
+      // const currentUserID = Number(review.dataset.userId)
+      const userReviewId = Number(review.dataset.reviewId)
+
+      // DOM traversal
+      const reviewer = review.parentElement.children[1].firstChild.textContent
+
+      if (hiddenUserName.textContent === reviewer) {
+        // edit user's review
+        const newReview = {
+          text: textArea.value,
+        }
+        editReview(newReview, userReviewId).then(() => {
+          window.location.reload() // <-- janky, but works
+        })
+      }
+    })
   }
 
   // delete review
@@ -75,6 +104,15 @@ if (window.location.pathname.includes('/reviews')) {
 const postReview = (newReview) =>
   fetch('/api/reviews', {
     method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(newReview),
+  })
+
+const editReview = (newReview, id) =>
+  fetch(`/api/reviews/${id}`, {
+    method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
     },
