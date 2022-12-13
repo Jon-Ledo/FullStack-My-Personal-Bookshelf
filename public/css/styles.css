@@ -78,18 +78,26 @@ h1 {
   font-size: 30px;
 }
 
-img {
-  max-width: 100%;
-  max-height: 350px;
+img { 
+  max-width: auto;
+  max-height: 300px;
+  /*border: solid orange 3px;*/
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding: 7px;
 }
 
 .fa-solid.fa-book {
   font-size: 36px;
 }
-
+ 
 .bookshelf {
   display: flex;
   flex-wrap: wrap;
+  margin: 50px;
+  /*border: solid black 3px;*/
+  justify-content: space-evenly;
 }
 
 .book-img-container {
@@ -98,7 +106,8 @@ img {
   padding-left: 40px;
   padding-top: 15px;
   position: relative;
-  justify-content: space-evenly;
+  justify-content:space-evenly;
+  border: solid green 3px;
 }
 
 .book-img-container::after {
@@ -125,6 +134,16 @@ img {
 .book-content {
   padding-left: 30px;
   padding-bottom: 30px;
+}
+
+.book {
+  margin: 10px;
+}
+
+.bookshelf1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem;
 }
 
 /*footer {
@@ -158,4 +177,30 @@ img {
 
 .about {
   padding-left: 30px;
+}
+
+.card1 {
+  width: 300px;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  /*justify-content: space-evenly;*/
+ /*border: solid black;*/
+  background-color: white;
+}
+
+.card1-title {
+  font-size: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+
+.card1-text {
+  font-size: 18px;
+  padding-left: 15px;
+  padding-right: 15px;
+
 }
