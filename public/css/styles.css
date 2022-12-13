@@ -190,3 +190,25 @@ img {
   border: 3px solid #73ad21;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
 }
+
+.about-box {
+  border: 1px solid #3e3e3e;
+  margin: 30px;
+  background-color: white;
+  padding: 25px;
+}
+
+.about1-body {
+  text-align: left;
+  padding: 30px 0;
+}
+
+.about1-title {
+  text-align: left;
+  font-size: 20px;
+}
+
+.about1-text {
+  font-size: 15px;
+  text-align: left;
+}
