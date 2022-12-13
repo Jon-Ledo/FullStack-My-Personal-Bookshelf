@@ -10,6 +10,7 @@
 
 {{> addbookForm}}
 
+{{!--
 <section class="bookshelf">
 
 {{#each books}}
@@ -31,10 +32,58 @@
     <div class="book-content">
       <h3 class="book-title">{{name}}</h3>
       <h5 class="book-author">{{author}}</h5>
+
+<!--
+ <div class="card-body">
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>--->
+
     </div>
   </div>
 {{/each}}
 
+
+</section>--}}
+
+
+<section class="bookshelf">
+
+{{#each books}}
+
+  <div class="book">
+
+  <div class="card1" style="width: 16rem;">
+
+{{#if image_url}}
+        <img src="{{image_url}}" alt="{{name}} by {{author}}">
+      {{else}}
+        <img src="/images/unavailable-cover.jpg" alt="{{name}} by {{author}}">
+      {{/if}}
+
+  
+
+        <!--<div class="card-body">-->
+       
+        <ul class="list-group list-group-flush">
+          <h5 class="card1-title">{{name}}</h5>
+          <p class="card1-text">{{author}}</p>
+          <p class="card1-text">
+            <li class="list-group-item">Some quick example text to build on the card title and make up the bulk of the card's content.</il>
+          {{!--<li class="list-group-item">{{name}}</li>
+          <li class="list-group-item">{{author}}</li>--}}
+          <li class="list-group-item"><a href="#" class="btn btn-primary">Mark Read</a></li>
+          <li class="list-group-item"><a href="#" class="btn btn-primary">Write A Review</a></li>
+          <li class="list-group-item"><a href="#" class="btn btn-primary">Delete Book</a></li>
+        </ul>
+        <div class="card-body">
+      </div>
+      </div>
+      </div>
+
+{{/each}}
+
 </section>
+
 
 {{/with}}
