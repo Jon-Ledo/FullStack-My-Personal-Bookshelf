@@ -47,16 +47,6 @@ a {
   padding: 16px;
 }
 
-/* .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 60px;
-} */
-
 .hero-image {
   background-image: url(/images/jessica-ruscello-OQSCtabGkSY-unsplash.jpg);
   background-repeat: no-repeat;
@@ -78,8 +68,8 @@ h1 {
   font-size: 30px;
 }
 
-img { 
-  max-width: auto;
+img {
+  max-width: 250px;
   max-height: 300px;
   /*border: solid orange 3px;*/
   margin-left: auto;
@@ -91,7 +81,7 @@ img {
 .fa-solid.fa-book {
   font-size: 36px;
 }
- 
+
 .bookshelf {
   display: flex;
   flex-wrap: wrap;
@@ -106,7 +96,7 @@ img {
   padding-left: 40px;
   padding-top: 15px;
   position: relative;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   border: solid green 3px;
 }
 
@@ -146,19 +136,6 @@ img {
   margin: 2rem;
 }
 
-/*footer {
-  color: white;
-  text-align: center;
-  bottom: 0;
-  margin: auto;
-  padding: 0 10px;
-  width: 100%;
-  position: fixed;
-  height: 50px;
-  background: #2d2d2d;
-  border-top: 12px solid #3e3e3e;
-}*/
-
 #content-wrap {
   padding-bottom: 2.5rem; /*Footer height*/
 }
@@ -186,7 +163,7 @@ img {
   margin: 0px;
   position: relative;
   /*justify-content: space-evenly;*/
- /*border: solid black;*/
+  /*border: solid black;*/
   background-color: white;
 }
 
@@ -202,5 +179,4 @@ img {
   font-size: 18px;
   padding-left: 15px;
   padding-right: 15px;
-
 }

@@ -1,473 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Review</title>
-    <link rel="stylesheet" href="css/stylesheet.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/stylesheet.css" />
+  </head>
+  <body>
     <section id="Review">
+      <style>
+        body {
+          background-color: rgb(205, 195, 50);
+        }
+
+        h1,
+        div,
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 100%;
+        }
+      </style>
+      <div class="Review-heading">
         <style>
-        body {background-color: rgb(205, 195, 50);}
-        h1   {color: black;}
-        p    {color: red;}
-a{
-    text-decoration: none;
-}
- h1,div,span{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-     flex-direction: column;
-     width: 100%;
-    }
-     </style>
-         <div class="Review-heading">
-            <style>
-               div{
-                letter-spacing: 1px;
-                margin: 30px 0px;
-                padding: 10px 20px;
-                display: flex;
-                flex-direction: center;
-                justify-content: center;
-                align-items: center;
-                
-               } 
-            </style>
-         <span>Review</span>
-         <style> 
-          span{
+          div {
+            letter-spacing: 1px;
+            /* margin: 30px 0px;
+            padding: 10px 20px; */
+            display: flex;
+            flex-direction: center;
+            justify-content: center;
+            align-items: center;
+          }
+        </style>
+        <span>Review</span>
+        <style>
+          span {
             font-size: 1.3rem;
             color: black;
             margin-bottom: 10px;
             letter-spacing: 2px;
             text-transform: uppercase;
           }
-         </style>
-         <h1>Let's talk about it</h1>
-          <style>
-            h1{
-                font-size: 2.2rem;
-                font-weight: 500;
-                background-color:aliceblue;
-                padding: 10px 20px;
-            }
-
-          </style>
-          <div class="review-box-container">
-            
-            </div>
-            <div class="book-name">
-                <style>
-                .book-name{
-                    position: relative;
-                    left: 30px;
-                  border: 3px solid #73AD21;
-                display:flex;
-                justify-content:left;
-                align-items:flex-start;
-                flex-wrap: wrap;
-                width: 1px 
-                height: 10px;
-                box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
-                                
-                background-color: bisque;
-                                
-                padding: 20px;
-                               
-                margin: 15px;
-                                
-                cursor: pointer; 
-                                
-                
-                                
-                } 
-                </style>
-                
-
-            </div>
-           <div class="review-box">
-            
-                <div class="box-top">
-                    <div class="profile">
-                        <div class="name-user">
-                            <div class="profile-img">
-                            <img src="images/a1.png">
-                        </div>
-                        <div class="review">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-    
-                
-            </div>
-
-                            <strong>ABC</strong>
-                            <span>@abc</span>
-                            <style>
-                            .review-box-container{
-                                display: flex;
-                                justify-content: center;
-                                align-items:center;
-                                flex-wrap: wrap;
-                                width: 100%;
-                            }
-                            .review-box{
-                                width:500px;
-                                height: 300px;
-                                box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
-                                background-color: bisque;
-                                padding: 20px;
-                                margin: 15px;
-                                cursor: pointer;
-
-                            }
-                            .profile-img{
-                                width: 50px;
-                                height: 50px;
-                                border-radius: 50%;
-                                overflow: hidden;
-                                margin-right: 10px;
-                            }
-                                .profile-img img{
-                                    width: 50%;
-                                    height: 50%;
-                                    object-fit: cover;
-                                    object-position: center;
-                                }
-                                .profile{
-                                    display:flex;
-                                    align-items: center;
-
-                                }
-                                .name-user{
-                                    display: flex;
-                                    flex-direction: column;
-
-                                }
-                                .name-user span{
-                                    color:#979797;
-                                    font-size: 0.8rem;
-                                }
-                                .reviews{
-                                    color: black;
-
-                                }
-                                .box-top{
-                                    display: flex;
-                                    justify-content: space-between;
-                                    align-items: center;
-                                    margin-bottom: 20px;
-                                
-
-                                }
-
-                            </style>
-                            <div class="reader-review">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In itaque ut reiciendis modi ad dolore? Qui provident architecto iste, maiores atque laudantium minus reprehenderit vero dignissimos iusto. Architecto, quod ratione.</p>
-            <style>
-                .reader-review p{
-                    font-size: 0.9rem;
-                    color:black
-  
-                }
-            </style>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-          </div>
-          <div class="review-box">
-            
-            <div class="box-top">
-                <div class="profile">
-                    <div class="name-user">
-                        <div class="profile-img">
-                        <img src="images/a1.png">
-                    </div>
-                    <div class="review">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-
-            
-        </div>
-
-                        <strong>ABC</strong>
-                        <span>@abc</span>
-                        <style>
-                        .review-box-container{
-                            display: flex;
-                            justify-content: center;
-                            align-items:center;
-                            flex-wrap: wrap;
-                            width: 100%;
-                        }
-                        .review-box{
-                            width:500px;
-                            height: 300px;
-                            box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
-                            background-color: bisque;
-                            padding: 20px;
-                            margin: 15px;
-                            cursor: pointer;
-
-                        }
-                        .profile-img{
-                            width: 50px;
-                            height: 50px;
-                            border-radius: 50%;
-                            overflow: hidden;
-                            margin-right: 10px;
-                        }
-                            .profile-img img{
-                                width: 50%;
-                                height: 50%;
-                                object-fit: cover;
-                                object-position: center;
-                            }
-                            .profile{
-                                display:flex;
-                                align-items: center;
-
-                            }
-                            .name-user{
-                                display: flex;
-                                flex-direction: column;
-
-                            }
-                            .name-user span{
-                                color:#979797;
-                                font-size: 0.8rem;
-                            }
-                            .reviews{
-                                color: black;
-
-                            }
-                            .box-top{
-                                display: flex;
-                                justify-content: space-between;
-                                align-items: center;
-                                margin-bottom: 20px;
-                            
-
-                            }
-
-                        </style>
-                        <div class="reader-review">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In itaque ut reiciendis modi ad dolore? Qui provident architecto iste, maiores atque laudantium minus reprehenderit vero dignissimos iusto. Architecto, quod ratione.</p>
-        <style>
-            .reader-review p{
-                font-size: 0.9rem;
-                color:black
-
-            }
         </style>
-                    </div>
+        <h1>Let's talk about it</h1>
+        <style>
+          h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            background-color: aliceblue;
+            padding: 10px 20px;
+          }
+        </style>
+        <div class="review-box-container"></div>
+        <div class="book-name">
+          <h2>Book name</h2>
+          <style>
+            .book-name {
+              /* position: relative;
+              left: 30px; */
+              border: 3px solid #73ad21;
+              /* display: flex; */
+              /* justify-content: left; */
+              /* align-items: flex-start; */
+              /* flex-wrap: wrap; */
+              /* width: 1px; */
+              /* height: 10px; */
+              box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
 
-                </div>
-            </div>
+              background-color: bisque;
+
+              /* padding: 20px;
+
+              margin: 15px;
+
+              cursor: pointer; */
+            }
+          </style>
         </div>
-      </div>
-      <div class="review-box">
-            
-        <div class="box-top">
+        <!--book name-->
+        <div class="review-box">
+          <div class="box-top">
             <div class="profile">
-                <div class="name-user">
-                    <div class="profile-img">
-                    <img src="images/a1.png">
+              <div class="name-user">
+                <div class="profile-img">
+                  <img src="https://placekitten.com/200/300" />
                 </div>
                 <div class="review">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-
-        
-    </div>
-
-                    <strong>ABC</strong>
-                    <span>@abc</span>
-                    <style>
-                    .review-box-container{
-                        display: flex;
-                        justify-content: center;
-                        align-items:center;
-                        flex-wrap: wrap;
-                        width: 100%;
-                    }
-                    .review-box{
-                        width:500px;
-                        height: 300px;
-                        box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
-                        background-color: bisque;
-                        padding: 20px;
-                        margin: 15px;
-                        cursor: pointer;
-
-                    }
-                    .profile-img{
-                        width: 50px;
-                        height: 50px;
-                        border-radius: 50%;
-                        overflow: hidden;
-                        margin-right: 10px;
-                    }
-                        .profile-img img{
-                            width: 50%;
-                            height: 50%;
-                            object-fit: cover;
-                            object-position: center;
-                        }
-                        .profile{
-                            display:flex;
-                            align-items: center;
-
-                        }
-                        .name-user{
-                            display: flex;
-                            flex-direction: column;
-
-                        }
-                        .name-user span{
-                            color:#979797;
-                            font-size: 0.8rem;
-                        }
-                        .reviews{
-                            color: black;
-
-                        }
-                        .box-top{
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
-                            margin-bottom: 20px;
-                        
-
-                        }
-
-                    </style>
-                    <div class="reader-review">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In itaque ut reiciendis modi ad dolore? Qui provident architecto iste, maiores atque laudantium minus reprehenderit vero dignissimos iusto. Architecto, quod ratione.</p>
-    <style>
-        .reader-review p{
-            font-size: 0.9rem;
-            color:black
-
-        }
-    </style>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                 </div>
-
-            </div>
-        </div>
-    </div>
-  </div>
-  <div class="review-box">
-            
-    <div class="box-top">
-        <div class="profile">
-            <div class="name-user">
-                <div class="profile-img">
-                <img src="images/a1.png">
-            </div>
-            <div class="review">
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-
-    
-</div>
 
                 <strong>ABC</strong>
                 <span>@abc</span>
                 <style>
-                .review-box-container{
+                  .review-box-container {
                     display: flex;
                     justify-content: center;
-                    align-items:center;
+                    align-items: center;
                     flex-wrap: wrap;
                     width: 100%;
-                }
-                .review-box{
-                    width:500px;
+                  }
+                  .review-box {
+                    width: 500px;
                     height: 300px;
-                    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+                    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
                     background-color: bisque;
                     padding: 20px;
                     margin: 15px;
                     cursor: pointer;
-
-                }
-                .profile-img{
+                  }
+                  .profile-img {
                     width: 50px;
                     height: 50px;
                     border-radius: 50%;
                     overflow: hidden;
                     margin-right: 10px;
-                }
-                    .profile-img img{
-                        width: 50%;
-                        height: 50%;
-                        object-fit: cover;
-                        object-position: center;
-                    }
-                    .profile{
-                        display:flex;
-                        align-items: center;
-
-                    }
-                    .name-user{
-                        display: flex;
-                        flex-direction: column;
-
-                    }
-                    .name-user span{
-                        color:#979797;
-                        font-size: 0.8rem;
-                    }
-                    .reviews{
-                        color: black;
-
-                    }
-                    .box-top{
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        margin-bottom: 20px;
-                    
-
-                    }
-
+                  }
+                  .profile-img img {
+                    width: 50%;
+                    height: 50%;
+                    object-fit: cover;
+                    object-position: center;
+                  }
+                  .profile {
+                    display: flex;
+                    align-items: center;
+                  }
+                  .name-user {
+                    display: flex;
+                    flex-direction: column;
+                  }
+                  .name-user span {
+                    color: #979797;
+                    font-size: 0.8rem;
+                  }
+                  .reviews {
+                    color: black;
+                  }
+                  .box-top {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 20px;
+                  }
                 </style>
                 <div class="reader-review">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In itaque ut reiciendis modi ad dolore? Qui provident architecto iste, maiores atque laudantium minus reprehenderit vero dignissimos iusto. Architecto, quod ratione.</p>
-<style>
-    .reader-review p{
-        font-size: 0.9rem;
-        color:black
-
-    }
-</style>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In
+                    itaque ut reiciendis modi ad dolore? Qui provident
+                    architecto iste, maiores atque laudantium minus
+                    reprehenderit vero dignissimos iusto. Architecto, quod
+                    ratione.
+                  </p>
+                  <style>
+                    .reader-review p {
+                      font-size: 0.9rem;
+                      color: black;
+                    }
+                  </style>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
 
+        <div class="review-box">
+          <div class="box-top">
+            <div class="profile">
+              <div class="name-user">
+                <div class="profile-img">
+                  <img src="images/a1.png" />
+                </div>
+                <div class="review">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+
+                <strong>ABC</strong>
+                <span>@abc</span>
+                <style>
+                  .review-box-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    width: 100%;
+                  }
+                  .review-box {
+                    width: 500px;
+                    height: 300px;
+                    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+                    background-color: bisque;
+                    padding: 20px;
+                    margin: 15px;
+                    cursor: pointer;
+                  }
+                  .profile-img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin-right: 10px;
+                  }
+                  .profile-img img {
+                    width: 50%;
+                    height: 50%;
+                    object-fit: cover;
+                    object-position: center;
+                  }
+                  .profile {
+                    display: flex;
+                    align-items: center;
+                  }
+                  .name-user {
+                    display: flex;
+                    flex-direction: column;
+                  }
+                  .name-user span {
+                    color: #979797;
+                    font-size: 0.8rem;
+                  }
+                  .reviews {
+                    color: black;
+                  }
+                  .box-top {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 20px;
+                  }
+                </style>
+                <div class="reader-review">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In
+                    itaque ut reiciendis modi ad dolore? Qui provident
+                    architecto iste, maiores atque laudantium minus
+                    reprehenderit vero dignissimos iusto. Architecto, quod
+                    ratione.
+                  </p>
+                  <style>
+                    .reader-review p {
+                      font-size: 0.9rem;
+                      color: black;
+                    }
+                  </style>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</div>
-</div>
-         
+        <div class="review-box">
+          <div class="box-top">
+            <div class="profile">
+              <div class="name-user">
+                <div class="profile-img">
+                  <img src="images/a1.png" />
+                </div>
+                <div class="review">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+
+                <strong>ABC</strong>
+                <span>@abc</span>
+                <style>
+                  .review-box-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    width: 100%;
+                  }
+                  .review-box {
+                    width: 500px;
+                    height: 300px;
+                    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+                    background-color: bisque;
+                    padding: 20px;
+                    margin: 15px;
+                    cursor: pointer;
+                  }
+                  .profile-img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin-right: 10px;
+                  }
+                  .profile-img img {
+                    width: 50%;
+                    height: 50%;
+                    object-fit: cover;
+                    object-position: center;
+                  }
+                  .profile {
+                    display: flex;
+                    align-items: center;
+                  }
+                  .name-user {
+                    display: flex;
+                    flex-direction: column;
+                  }
+                  .name-user span {
+                    color: #979797;
+                    font-size: 0.8rem;
+                  }
+                  .reviews {
+                    color: black;
+                  }
+                  .box-top {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 20px;
+                  }
+                </style>
+                <div class="reader-review">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In
+                    itaque ut reiciendis modi ad dolore? Qui provident
+                    architecto iste, maiores atque laudantium minus
+                    reprehenderit vero dignissimos iusto. Architecto, quod
+                    ratione.
+                  </p>
+                  <style>
+                    .reader-review p {
+                      font-size: 0.9rem;
+                      color: black;
+                    }
+                  </style>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="review-box">
+          <div class="box-top">
+            <div class="profile">
+              <div class="name-user">
+                <div class="profile-img">
+                  <img src="images/a1.png" />
+                </div>
+                <div class="review">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+
+                <strong>ABC</strong>
+                <span>@abc</span>
+                <style>
+                  .review-box-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    width: 100%;
+                  }
+                  .review-box {
+                    width: 500px;
+                    height: 300px;
+                    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+                    background-color: bisque;
+                    padding: 20px;
+                    margin: 15px;
+                    cursor: pointer;
+                  }
+                  .profile-img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin-right: 10px;
+                  }
+                  .profile-img img {
+                    width: 50%;
+                    height: 50%;
+                    object-fit: cover;
+                    object-position: center;
+                  }
+                  .profile {
+                    display: flex;
+                    align-items: center;
+                  }
+                  .name-user {
+                    display: flex;
+                    flex-direction: column;
+                  }
+                  .name-user span {
+                    color: #979797;
+                    font-size: 0.8rem;
+                  }
+                  .reviews {
+                    color: black;
+                  }
+                  .box-top {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 20px;
+                  }
+                </style>
+                <div class="reader-review">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In
+                    itaque ut reiciendis modi ad dolore? Qui provident
+                    architecto iste, maiores atque laudantium minus
+                    reprehenderit vero dignissimos iusto. Architecto, quod
+                    ratione.
+                  </p>
+                  <style>
+                    .reader-review p {
+                      font-size: 0.9rem;
+                      color: black;
+                    }
+                  </style>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
-</body>
+  </body>
 </html>
