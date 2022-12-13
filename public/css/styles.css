@@ -112,13 +112,13 @@ img {
   background-color: #2d2d2d76;
 }
 
-.btn-close {
+/* .btn-close {
   display: none;
-}
+} */
 
-.book:hover .btn-close {
+/* .book:hover .btn-close {
   display: block;
-}
+} */
 
 .book-content {
   padding-left: 30px;
