@@ -190,3 +190,12 @@ img {
   border: 3px solid #73ad21;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
 }
+
+.fa-circle-check {
+  font-size: 24px;
+  color: green;
+}
+
+.hide {
+  display: none;
+}

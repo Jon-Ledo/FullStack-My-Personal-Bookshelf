@@ -32,8 +32,9 @@ if (window.location.pathname.includes('/bookshelf')) {
   readBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
       e.preventDefault()
+
+      const checkmarkSpan = e.currentTarget.nextElementSibling
       const bookId = btn.closest('.book').dataset.bookId
-      console.log(bookId)
       let isReadString = btn.dataset.isRead
       let isReadBoolean = isReadString === 'true' // return boolean type
 
@@ -42,6 +43,8 @@ if (window.location.pathname.includes('/bookshelf')) {
       }
 
       editBoolean(bookId, updatedValue).then(() => {
+        checkmarkSpan.classList.toggle('hide')
+        // const span = document.querySelector('span')
         if (isReadBoolean) {
           isReadString = 'true'
         } else {
