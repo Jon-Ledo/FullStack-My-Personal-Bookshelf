@@ -114,13 +114,12 @@ router.post('/logout', (req, res) => {
 
 
 
-  try {
-    const newUser = await User.create(req.body)
+//   try {
+//     const newUser = User.create(req.body)
 
-    res.status(201).json({ message: 'new user created', newUser })
-  } catch (error) {
-    res.status(500).json(error)
-  }
+//     res.status(201).json({ message: 'new user created', newUser })
+//   } catch (error) {res.status(500).json(error);
+// }
 
 
 
