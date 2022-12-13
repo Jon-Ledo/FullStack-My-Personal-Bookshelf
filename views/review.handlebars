@@ -1,9 +1,6 @@
 
 <h1>Reviews Page</h1>
 <hr>
-         <!-- If the user is logged in, render the gallery content -->
-{{#if loggedIn}}
-
 
 {{#with bookData}}
   <h1>Book Data</h1>
@@ -72,11 +69,3 @@
   <button type="submit" class="btn btn-primary" id="editReview">Edit Review</button>
 </form>
   <button type="submit" class="btn btn-primary" id="deleteReview">Delete Review</button>
-
-
-
-  
-        {{!-- >!-- Otherwise, provide a link to login --> --}}
-    {{else}}
-      <a href="/login">You must login first to view books</a>
-    {{/if}}

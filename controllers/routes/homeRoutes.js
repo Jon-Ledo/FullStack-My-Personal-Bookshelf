@@ -35,12 +35,16 @@ router.get('/browse', async (req, res) => {
       ],
     })
 
-      
     const books = dbBookData.map((book) => {
       return book.get({ plain: true })
     })
- // Send over the 'loggedIn' session variable to the 'homepage' template
-    res.render('browse', { books, loggedIn: req.session.loggedIn,});
+    // Send over the 'loggedIn' session variable to the 'home' template
+    res.render('home', {
+      books,
+      loggedIn: req.session.loggedIn,
+    });
+
+    // res.render('browse', { books })
   } catch (error) {
     res.render('error')
   }
@@ -56,7 +60,7 @@ router.get('/bookshelf/:id', async (req, res) => {
 
     const userBookshelf = dbUserData.get({ plain: true })
 
-    res.render('books', { userBookshelf,  loggedIn: req.session.loggedIn })
+    res.render('books', { userBookshelf })
   } catch (error) {
     res.render('error')
   }
@@ -78,7 +82,7 @@ router.get('/reviews/:id', async (req, res) => {
 
     const bookData = await dbBookData.get({ plain: true })
 
-    res.render('review', { bookData,  loggedIn: req.session.loggedIn })
+    res.render('review', { bookData })
   } catch (error) {
     res.render('error')
   }
@@ -105,7 +109,6 @@ router.get('/reviews/:id', async (req, res) => {
 // })
 
 // Login route
-
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect to the homepage
   if (req.session.loggedIn) {

@@ -1,28 +1,14 @@
 const path = require('path')
 const express = require('express')
-
-const session = require('express-session');
-
 const app = express()
 const cors = require('cors')
 const PORT = process.env.PORT || 3001
 const sequelize = require('./config/connection')
 const routes = require('./controllers/routes')
-const exphbs = require('express-handlebars')
-const helpers = require('./utils/helpers')
-
-// Set up sessions
-const sess = {
-  secret: 'Super secret secret',
-  resave: false,
-  saveUninitialized: true,
-};
-
-app.use(session(sess));
-
 
 // handlebars
-
+const exphbs = require('express-handlebars')
+const helpers = require('./utils/helpers')
 const hbs = exphbs.create({ helpers })
 app.engine('handlebars', hbs.engine)
 app.set('view engine', 'handlebars')

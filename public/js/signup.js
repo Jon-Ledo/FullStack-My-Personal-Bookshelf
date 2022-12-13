@@ -15,8 +15,8 @@ if (window.location.pathname.includes('/sign_up')) {
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
-  const email = document.querySelector('#emailLogin').value.trim();
-  const password = document.querySelector('#passwordLogin').value.trim();
+  const email = document.querySelector('#email-login').value.trim();
+  const password = document.querySelector('#password-login').value.trim();
 
   if (email && password) {
     const response = await fetch('/api/users/login', {
@@ -62,4 +62,22 @@ document
 document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
+
+
+// // *********************************
+// logout 
+const logout = async () => {
+  const response = await fetch('/api/users/logout', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+  });
+
+  if (response.ok) {
+    document.location.replace('/');
+  } else {
+    alert('Failed to log out.');
+  }
+};
+
+document.querySelector('#logout').addEventListener('click', logout);
 

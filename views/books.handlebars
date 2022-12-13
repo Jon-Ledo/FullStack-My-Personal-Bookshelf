@@ -1,9 +1,5 @@
 
 
-<!-- If the user is logged in, render the gallery content -->
-{{#if loggedIn}}
-
-
 {{!-- userBookshelf comes from the homeroutes, inside the render method --}}
 {{#with userBookshelf}}
 
@@ -42,9 +38,3 @@
 </section>
 
 {{/with}}
-
-
-        {{!-- >!-- Otherwise, provide a link to login --> --}}
-{{else}}
-      <a href="/login">You must login first to view books</a>
-{{/if}}
