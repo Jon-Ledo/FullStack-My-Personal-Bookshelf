@@ -1,71 +1,79 @@
+{{#with bookData}}
 
-<h1>Reviews Page</h1>
+<section class="Review-heading container">
+  <h1 class="text-center book-name mt-3 mb-5">Reviews for <span class="docTitle">{{name}}</span></h1>
+
+  <div class="row">
+    <div class="book-info-container col-md-4">
+      <img src="{{image_url}}" alt="{{name}}, by {{author}}">
+      {{!-- book ID : {{id}} --}}
+      Book name : {{name}}
+      <br>
+      Author : {{author}}
+      <br>
+    </div>
+    
+    {{!-- Form to add a review --}}
+    <form class="col-md-6 mb-5">
+      <div class="form-floating mb-3">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+          style="height: 100px"></textarea>
+        <label for="floatingTextarea">Submit a review</label>
+      </div>
+    
+      <button type="submit" class="btn btn-primary" id="submitReview">Submit</button>
+      <button type="submit" class="btn btn-primary" id="editReview">Edit Review</button>
+    <button type="submit" class="btn btn-primary" id="deleteReview">Delete Review</button>
+    </form>
+    {{!-- form end --}}
+
+
+    <h2 class="fs-1 text-center my-5 book-name">Let's talk about it!</h2>
+
+
+    {{#if user_reviews}}
+    {{#each user_reviews}}
+    <div class="review-box-container">
+      <div class="review-box col-md-6 mb-3">
+
+        <div class="profile-img"></div>
+      
+        <p class="name-user mb-1"><span id="userName">{{user_name}} </span></p>
+        <p class="subtitle">@{{email}}</p>
+      
+        {{!-- stars --}}
+        <div class="review mb-1">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      
+      
+        <div class="reader-review mb-5" data-user-id="{{id}}" data-review-id="{{review.id}}">
+          <p>{{review.text}}</p>
+          <p class="mt-3">last updated: {{format_date review.createdAt}}, {{format_time review.createdAt}}</p>
+        </div>
+
+        
+      </div>{{!-- review-box div --}}
+    </div>{{!-- review-box-container --}}
+
+    {{/each}}
+    {{!-- Render this if the user_reviews array is empty --}}
+    {{else}}
+    <h1>No reviews yet</h1>
+    {{/if}}
+
+  </div>{{!-- row div --}}
+</section>
+
+{{!-- imported stuff --}}
+
+<hr>
+  <p id="secretSelector">{{user_id}} this is the secret selector</p>
 <hr>
 
-{{#with bookData}}
-  <h1>Book Data</h1>
-  book ID : {{id}}
-  <br>
-  <br>
-  Book name : {{name}}
-  <br>
-  <br>
-  Author : {{author}}
-  <br>
-  <br>
-  <img src="{{image_url}}" alt="{{name}}, by {{author}}" >
-  <br>
-  <br>
-  is read? : {{is_read}}
-  <br>
-  <br>
-  <p id="secretSelector">{{user_id}}</p>
-  <br>
-  <br>
-  created at : {{format_date createdAt}}, {{format_time createdAt}}
-  <br>
-  <br>
-  <hr>
-
-  <h2>USER Review Data</h2>
-  <hr>
-
-
-  {{#if user_reviews}}
-    {{#each user_reviews}}
-      <p>username :  <span id="userName">{{user_name}} </span></p>
-      <br>
-      users email : {{email}}
-      <br>
-      user Id : {{id}} <p data-user-id="{{id}}">review component value here</p>
-      <br>
-      review: {{review.text}}
-      <br>
-      review ID: {{review.id}}
-      <br>
-      created at: {{format_date review.createdAt}}, {{format_time review.createdAt}}
-      <br>
-      lastupdated at : {{format_date review.updatedAt}}, {{format_time review.updatedAt}}
-      <hr>
-    {{/each}}
-
-  {{!-- Render this if the user_reviews array is empty --}}
-  {{else}}
-    <h1>No reviews yet</h1>
-  {{/if}}
 
 {{/with}}
-
-
-
-
-<form class="col-md-4">
-  <div class="form-floating mb-3">
-    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" style="height: 100px"></textarea>
-    <label for="floatingTextarea">Submit a review</label>
-  </div>
-  
-  <button type="submit" class="btn btn-primary" id="submitReview">Submit</button>
-  <button type="submit" class="btn btn-primary" id="editReview">Edit Review</button>
-</form>
-  <button type="submit" class="btn btn-primary" id="deleteReview">Delete Review</button>
