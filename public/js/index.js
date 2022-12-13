@@ -19,7 +19,7 @@ if (window.location.pathname.includes('/bookshelf')) {
 
   deleteBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
-      const bookId = btn.parentElement.dataset.bookId
+      const bookId = btn.closest('.book').dataset.bookId
       deleteBookFromDB(e, bookId)
     })
   })
@@ -85,20 +85,3 @@ const deleteBook = (id) =>
       'Content-Type': 'application/json',
     },
   })
-
-// nav bar scroll function
-// window.onscroll = function () {
-//   console.log(sticky)
-//   myFunction()
-// }
-
-// const navbar = document.getElementById('navbar')
-// const sticky = navbar.offsetTop
-
-// function myFunction() {
-//   if (window.pageYOffset >= sticky) {
-//     navbar.classList.add('sticky')
-//   } else {
-//     navbar.classList.remove('sticky')
-//   }
-// }
