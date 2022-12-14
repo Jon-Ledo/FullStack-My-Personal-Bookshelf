@@ -29,8 +29,6 @@ Project put together using the following libraries/packages:
 - [Express-session](https://www.npmjs.com/package/express-session)
 - [handlebars](https://handlebarsjs.com/)
 - [mySql2](https://www.npmjs.com/package/mysql2)
-- [passport](https://www.npmjs.com/package/mysql2)
-- [passport-local](https://www.npmjs.com/package/passport-local)
 - [Sequelize](https://sequelize.org/)
 
 ## Preview
