@@ -125,3 +125,10 @@ const editBoolean = (id, bool) =>
     },
     body: JSON.stringify(bool),
   })
+
+// basic doc title changes
+if (window.location.pathname.includes('/about')) {
+  document.title = 'About'
+} else if (window.location.pathname.includes('/browse')) {
+  document.title = 'Browsing Books'
+}
