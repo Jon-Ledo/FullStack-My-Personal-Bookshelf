@@ -6,26 +6,36 @@
         <i class="fa-solid fa-book"></i>
         <span class="logo-name fs-3">Bookshelf</span>
       </span>
-      <ul class="d-flex">
-        <li class="nav-item">
-          <a class="nav-link active fs-4" aria-current="page" href="/">Home</a>
-        </li>
+      <div class="d-flex justify-content-between align-items-center  btns-container">
 
-        {{!-- conditionally render the bookshelf link --}}
+        <ul class="d-flex">
+          <li class="nav-item">
+            <a class="nav-link fs-4" aria-current="page" href="/">Home</a>
+          </li>
+
+          {{!-- conditionally render the bookshelf link --}}
+          {{#if loggedIn}}
+          <li class="nav-item">
+            <a class="nav-link fs-4" aria-current="page" href="/bookshelf/{{user_id}}">My Bookshelf</a>
+          </li>
+          {{/if}}
+
+          <li class="nav-item">
+            <a class="nav-link fs-4" aria-current="page" href="/browse">Browse Books</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link fs-4" href="/about">About</a>
+          </li>
+        </ul>
+
+        {{!-- conditionally render the log out button --}}
         {{#if loggedIn}}
-        <li class="nav-item">
-          <a class="nav-link active fs-4" aria-current="page" href="/bookshelf/{{user_id}}">My Bookshelf</a>
-        </li>
+        <span class="logout-btn" id="logout">
+          Logout
+        </span>
         {{/if}}
-
-        <li class="nav-item">
-          <a class="nav-link active fs-4" aria-current="page" href="/browse">Browse Books</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fs-4" href="/about">About</a>
-        </li>
-
-      </ul>
+      </div>
     </div>
   </div>
 </nav>
