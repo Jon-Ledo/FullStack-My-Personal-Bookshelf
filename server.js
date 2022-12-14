@@ -1,10 +1,20 @@
 const path = require('path')
 const express = require('express')
+const session = require('express-session')
 const app = express()
 const cors = require('cors')
 const PORT = process.env.PORT || 3001
 const sequelize = require('./config/connection')
 const routes = require('./controllers/routes')
+
+// session
+const sess = {
+  secret: 'Super secret secret',
+  resave: false,
+  saveUninitialized: false,
+}
+
+app.use(session(sess))
 
 // handlebars
 const exphbs = require('express-handlebars')
