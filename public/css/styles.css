@@ -222,3 +222,7 @@ img {
 .hide {
   display: none;
 }
+
+.signup-container {
+  margin: 45px;
+}
