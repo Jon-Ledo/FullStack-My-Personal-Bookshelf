@@ -10,6 +10,14 @@
         <li class="nav-item">
           <a class="nav-link active fs-4" aria-current="page" href="/">Home</a>
         </li>
+
+        {{!-- conditionally render the bookshelf link --}}
+        {{#if loggedIn}}
+        <li class="nav-item">
+          <a class="nav-link active fs-4" aria-current="page" href="/bookshelf/{{user_id}}">My Bookshelf</a>
+        </li>
+        {{/if}}
+
         <li class="nav-item">
           <a class="nav-link active fs-4" aria-current="page" href="/browse">Browse Books</a>
         </li>

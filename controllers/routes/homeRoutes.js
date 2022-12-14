@@ -3,12 +3,10 @@ const { User, Book, Review } = require('../../models')
 
 // home page
 router.get('/', async (req, res) => {
-  res.render('home')
-})
-
-//login page
-router.get('/login', async (req, res) => {
-  res.render('login')
+  res.render('home', {
+    loggedIn: req.session.loggedIn,
+    user_id: req.session.user_id,
+  })
 })
 
 // signup page
@@ -18,7 +16,10 @@ router.get('/sign_up', async (req, res) => {
 
 // about page
 router.get('/about', async (req, res) => {
-  res.render('about')
+  res.render('about', {
+    loggedIn: req.session.loggedIn,
+    user_id: req.session.user_id,
+  })
 })
 
 // browse all books
@@ -39,7 +40,11 @@ router.get('/browse', async (req, res) => {
       return book.get({ plain: true })
     })
 
-    res.render('browse', { books })
+    res.render('browse', {
+      books,
+      loggedIn: req.session.loggedIn,
+      user_id: req.session.user_id,
+    })
   } catch (error) {
     res.render('error')
   }
@@ -55,7 +60,11 @@ router.get('/bookshelf/:id', async (req, res) => {
 
     const userBookshelf = dbUserData.get({ plain: true })
 
-    res.render('books', { userBookshelf })
+    res.render('books', {
+      userBookshelf,
+      loggedIn: req.session.loggedIn,
+      user_id: req.session.user_id,
+    })
   } catch (error) {
     res.render('error')
   }
@@ -78,7 +87,11 @@ router.get('/reviews/:id', async (req, res) => {
 
     const bookData = await dbBookData.get({ plain: true })
 
-    res.render('review', { bookData })
+    res.render('review', {
+      bookData,
+      loggedIn: req.session.loggedIn,
+      user_id: req.session.user_id,
+    })
   } catch (error) {
     res.render('error')
   }
