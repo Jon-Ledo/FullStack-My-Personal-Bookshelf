@@ -15,8 +15,8 @@ if (window.location.pathname.includes('/sign_up')) {
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
-  const email = document.querySelector('#email-login').value.trim();
-  const password = document.querySelector('#password-login').value.trim();
+  const email = document.querySelector('#exampleInputEmail1').value.trim();
+  const password = document.querySelector('#exampleInputPassword1').value.trim();
 
   if (email && password) {
     const response = await fetch('/api/users/login', {
@@ -36,9 +36,9 @@ const loginFormHandler = async (event) => {
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
-  const username = document.querySelector('#username-signup').value.trim();
-  const email = document.querySelector('#email-signup').value.trim();
-  const password = document.querySelector('#password-signup').value.trim();
+  const username = document.querySelector('#inputusername4').value.trim();
+  const email = document.querySelector('#inputEmail4').value.trim();
+  const password = document.querySelector('#inputPassword4').value.trim();
 
   if (username && email && password) {
     const response = await fetch('/api/users', {
